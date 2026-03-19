@@ -1,9 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("data/menus_cleaned.csv")
-
 def recommend_dishes(df, max_price=None, keyword=None, dietary=None, menu_type=None, city=None):
-
     results = df.copy()
 
     # price filter
@@ -28,6 +25,6 @@ def recommend_dishes(df, max_price=None, keyword=None, dietary=None, menu_type=N
 
     # city filter
     if city:
-        df = df[df["city"].str.lower() == city.lower()]
+        results = results[results["city"].str.lower() == city.lower()]
 
     return results.sort_values(by="price")

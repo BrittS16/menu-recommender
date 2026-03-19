@@ -53,11 +53,11 @@ if st.button("Get recommendations"):
     try:
         results = recommend_dishes(
             df,
+            city=city if city else None,
             max_price=max_price if max_price > 0 else None,
             keyword=keyword if keyword else None,
             dietary=dietary if dietary else None,
-            menu_type=menu_type if menu_type else None,
-            city=city if city else None
+            menu_type=menu_type if menu_type else None
         )
 
         if results.empty:
