@@ -1,8 +1,6 @@
 import re
 import pandas as pd
 
-from scraper.scrape_menus import scrape_all_menus
-
 # if value is empty return none to avoid errors later
 def clean_text(text):
     if pd.isna(text) or text is None:
@@ -377,7 +375,7 @@ def clean_menu_data(df):
 # run scraping and cleaning pipeline
 def main():
     # scrape raw menu data
-    raw_df = scrape_all_menus()
+    raw_df = pd.read_csv("data/menus_raw.csv")
     # clean the scraped data
     clean_df = clean_menu_data(raw_df)
 
