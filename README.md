@@ -11,11 +11,11 @@ Users can filter dishes by:
 The system then returns matching dishes along with their restaurant and location.
 
 Features
-- Web scraping of real restaurant menus
-- Data cleaning and standardisation
-- Automatic tagging (vegetarian, vegan, etc.)
-- Rule-based filtering system
-- Interactive user interface using Streamlit
+- Web scraping of real restaurant menus --> scraper
+- Data cleaning and standardisation --> processing
+- Automatic tagging (vegetarian, vegan, etc.) --> processing
+- Rule-based filtering system --> processing
+- Interactive user interface using Streamlit --> recommender
 
 Data
 The dataset is created by scraping multiple restaurant websites. Each dish contains:
